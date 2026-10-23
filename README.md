@@ -11,8 +11,6 @@ Stevens Institute of Technology, B.S. Computer Science, expected May 2028; looki
 - **[offerpilot](https://github.com/adleraaa/offerpilot)**: local, human-in-the-loop job-search pipeline. Pulls postings from public ATS APIs, drops ones that break hard constraints with deterministic rules, scores the rest with one LLM call, and stops at a SQLite review queue. Nothing is sent to employers.
 - **[internradar-ai](https://github.com/adleraaa/internradar-ai)**: internship tracker for undergraduate CS students. Candidate postings come from the SimplifyJobs list; each kept entry links to the official application page and carries a last-verified date. A GitHub Actions job updates the list daily. [Live](https://internradar-ai.vercel.app)
 
-All of these projects were built with Claude Code (an AI coding agent); each README has a "How this was built" section.
-
 ## Contact
 
 - Email: adler1433223@gmail.com
