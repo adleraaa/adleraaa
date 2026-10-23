@@ -1,12 +1,17 @@
-# Hi, I'm Yunlong
+# Yunlong (Adler) Lu
 
-CS undergraduate at Stevens Institute of Technology (Class of 2029), based between Hoboken, NJ and Los Angeles. I like building small, practical tools that solve a real problem end to end — lately that means web apps and automation built around LLMs.
+Stevens Institute of Technology, B.S. Computer Science, expected May 2028; looking for Summer 2027 software engineering internships. Based between Hoboken, NJ and Los Angeles.
 
 ## Projects
 
-- **[pathpilot-ai](https://github.com/adleraaa/pathpilot-ai)** — AI academic-advising web app that turns degree requirements into course plans and strategy reports. Next.js, TypeScript, DeepSeek API. [Live demo](https://pathpilot-ai-one.vercel.app)
-- **[internradar-ai](https://github.com/adleraaa/internradar-ai)** — verification-first internship tracker for CS undergrads: official application links only, with freshness checks. Next.js + Python. [Live demo](https://internradar-ai.vercel.app)
-- **[taobao-buyer-order-exporter](https://github.com/adleraaa/taobao-buyer-order-exporter)** — local Playwright tool that exports your own Taobao order history to CSV/XLSX. Manual login, no captcha bypass, everything stays on your machine.
+- **[pgqueue](https://github.com/adleraaa/pgqueue)**: durable job queue on a single PostgreSQL table, with a FastAPI API for producers and a Python worker library. Workers claim jobs with `SELECT ... FOR UPDATE SKIP LOCKED` and a lease kept alive by a heartbeat; failed jobs retry with exponential backoff and are dead-lettered after `max_attempts`.
+- **[hudson-transit](https://github.com/adleraaa/hudson-transit)**: live arrivals board for PATH and the NYC Subway (Next.js, TypeScript). Normalizes PATH's JSON feed and the MTA's eight GTFS-realtime feeds into one zod-validated schema. [Live](https://hudson-transit.vercel.app)
+- **[nyc311-pipeline](https://github.com/adleraaa/nyc311-pipeline)**: incremental ELT of NYC 311 service requests into DuckDB, modeled with dbt, with data-quality checks, refreshed daily by GitHub Actions. [Dashboard](https://adleraaa.github.io/nyc311-pipeline/)
+- **[toolcall-qlora-bfcl](https://github.com/adleraaa/toolcall-qlora-bfcl)**: QLoRA fine-tune of Qwen2.5-1.5B-Instruct for function calling on one 8 GiB laptop GPU, measured on Berkeley Function Calling Leaderboard (BFCL) tasks, including how much it hurt the model's ability to decline when no function fits.
+- **[offerpilot](https://github.com/adleraaa/offerpilot)**: local, human-in-the-loop job-search pipeline. Pulls postings from public ATS APIs, drops ones that break hard constraints with deterministic rules, scores the rest with one LLM call, and stops at a SQLite review queue. Nothing is sent to employers.
+- **[internradar-ai](https://github.com/adleraaa/internradar-ai)**: internship tracker for undergraduate CS students. Candidate postings come from the SimplifyJobs list; each kept entry links to the official application page and carries a last-verified date. A GitHub Actions job updates the list daily. [Live](https://internradar-ai.vercel.app)
+
+Most of these projects were built with Claude Code (an AI coding agent); each README has a "How this was built" section.
 
 ## Contact
 
